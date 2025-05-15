@@ -2,7 +2,7 @@ import mysql from "mysql2/promise";
 import dotenv from "dotenv";
 dotenv.config();
 
-const sslEnabled = process.env.DB_SSL === "true";
+const sslEnabled = process.env.DB_SSL === "false";
 
 const pool = mysql.createPool({
   host: process.env.MYSQL_DB_HOST,

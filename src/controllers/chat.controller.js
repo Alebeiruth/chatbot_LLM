@@ -146,35 +146,52 @@ export async function chatController(req, res) {
     if (eConsultaCurso) {
       filtros = await extrairFiltrosDeTexto(message);
 
-      // Corrigir reconhecimento de filtros
+      const [[context]] = await pool.query(
+        "SELECT * FROM lead_context WHERE lead_id = ?",
+        [req.leadId]
+      );
+
+      filtros.curso = filtros.curso || context?.curso || null;
+      filtros.cidade = filtros.cidade || context?.cidade || null;
+      filtros.modalidade = filtros.modalidade || context?.modalidade || null;
+
+      filtros.modalidade = normalizarValorPadrao(
+        filtros.modalidade,
+        modalidadeValidas
+      );
+      filtros.turno = normalizarValorPadrao(filtros.turno, turnosValidos);
+
       if (!filtros.curso) {
         const cursoDetectado = validarCursoInformado(message);
         if (cursoDetectado) filtros.curso = cursoDetectado;
       }
 
-      // Corrigir modalidade
-      filtros.modalidade = normalizarValorPadrao(
-        filtros.modalidade,
-        modalidadeValidas
-      );
-
-      // Corrigir turno se houver
-      filtros.turno = normalizarValorPadrao(filtros.turno, turnosValidos);
-
-      // Detectar cidade na mensagem, se ainda estiver vazia
       if (!filtros.cidade) {
         const cidadesConhecidas = [
-          /*...*/
+          "Curitiba",
+          "Londrina",
+          "Maringá",
+          "Toledo",
+          "Cascavel",
         ];
         for (const cidade of cidadesConhecidas) {
-          if (message.toLowerCase().includes(cidade.toLowerCase())) {
+          if (mensagemLower.includes(cidade.toLowerCase())) {
             filtros.cidade = cidade;
             break;
           }
         }
       }
 
-      // Agora sim: verificar se algo ainda está faltando
+      await pool.query(
+        `INSERT INTO lead_context (lead_id, curso, cidade, modalidade)
+         VALUES (?, ?, ?, ?)
+         ON DUPLICATE KEY UPDATE
+           curso = VALUES(curso),
+           cidade = VALUES(cidade),
+           modalidade = VALUES(modalidade)`,
+        [req.leadId, filtros.curso, filtros.cidade, filtros.modalidade]
+      );
+
       const perguntas = [];
       if (!filtros.modalidade)
         perguntas.push("Qual modalidade você prefere? (Presencial ou EAD)");
@@ -198,8 +215,6 @@ export async function chatController(req, res) {
         return res.status(200).json({ reply: respostaPerguntas });
       }
 
-      filtros.turno = normalizarValorPadrao(filtros.turno, turnosValidos);
-
       cursos = await buscarCursos(filtros);
 
       const [[leadInfo]] = await pool.query(
@@ -217,7 +232,7 @@ export async function chatController(req, res) {
 
       if (desejaSeInscrever) {
         const mensagemWhats = `Olá! Meu nome é ${nome}, tenho interesse no curso de ${curso} em ${cidade}. Poderia me ajudar?`;
-        const numberWhatsapp = "559999999999"; // Substitua pelo número desejado
+        const numberWhatsapp = "559999999999";
         const urlEncodedMessage = encodeURIComponent(mensagemWhats);
 
         const linkWhatsapp = `https://api.whatsapp.com/send?phone=${numberWhatsapp}&text=${urlEncodedMessage}`;
@@ -259,7 +274,7 @@ export async function chatController(req, res) {
       return res.status(200).json({ reply: resposta });
     }
 
-    const botResponse = await getChatResponse(message);
+    const botResponse = await getChatResponse(message, req.leadId);
 
     const [[leadInfo]] = await pool.query("SELECT * FROM leads WHERE id = ?", [
       req.leadId,

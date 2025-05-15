@@ -29,16 +29,6 @@ async function getChatResponse(userMessage, leadId) {
         - Seja educado e claro, evite termos técnicos.
         - Se não souber responder, diga que irá direcionar para um atendente.
         - Fora do horário comercial (seg-sex, 9h às 17h), diga que será respondido depois.
-
-        Exemplos:
-        Usuário: "Quais cursos têm em Curitiba?"
-        Resposta: "Temos várias opções de cursos técnicos em Curitiba. Você procura alguma unidade específica?"
-
-        Usuário: "Qual o preço do curso técnico de Mecânica?"
-        Resposta: "O valor pode variar conforme a unidade e modalidade. Em qual cidade você quer estudar?"
-
-        Usuário: "Quero me matricular"
-        Resposta: "Ótimo! Posso te encaminhar para nosso formulário de pré-inscrição ou um atendente via WhatsApp. O que prefere?"
         `,
       },
     ];
@@ -76,34 +66,25 @@ async function getChatResponse(userMessage, leadId) {
 }
 
 /**
- * Envia mensagem para IA pedindo que retorne apenas filtros de busca de cursos.
+ * Extrai apenas os filtros modalidade, cidade e curso.
  */
 async function extrairFiltrosDeTexto(userMessage) {
   const prompt = `
 Você é um analisador de intenção para perguntas sobre cursos técnicos do SENAI.
 
-Extraia filtros da frase abaixo em formato JSON com os campos:
+Extraia apenas os campos: "modalidade", "cidade" e "curso" no formato JSON.
 
+Exemplo:
 {
-  "curso": "",
-  "regional": "",
-  "unidade": "",
-  "estrategia": "",
-  "vagas": "",
-  "turno": "",
-  "momentos_presenciais": "",
-  "horario_aulas": "",
-  "duracao_meses": "",
-  "data_inicio": "",
-  "data_inicio_matriculas": "",
-  "valor_curso": ""
+  "modalidade": "EAD",
+  "cidade": "Curitiba",
+  "curso": "Química"
 }
 
-Atenção:
-- A cidade onde o curso acontece deve ir em "unidade", como: "Maringá", "Ponta Grossa", "Toledo".
-- "regional" é uma macro região administrativa como: "Norte", "Oeste", "Campos Gerais".
-- Se a pergunta mencionar um curso específico (ex: Química), preencha o campo "curso" exatamente como foi citado.
-- Preencha apenas os campos mencionados diretamente na frase. Não invente ou assuma dados.
+Importante:
+- Se a cidade não estiver presente, deixe vazia.
+- Se a modalidade não for mencionada, deixe vazia.
+- O curso deve ser exatamente como mencionado.
 
 Frase:
 "${userMessage}"
