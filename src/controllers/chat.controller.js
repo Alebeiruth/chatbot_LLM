@@ -5,14 +5,42 @@ import {
 } from "../services/openai.service.js";
 import pool from "../config/db.js";
 import fs from "fs";
+import { buscarDescricaoCurso } from "../utils/carregarCursoCsv.js";
 
 const modalidadeValidas = ["Presencial", "EAD"];
 const turnosValidos = ["Integral", "Noturno"];
+
+const cursosDisponiveis = [
+  "Administração",
+  "Alimentos",
+  "Automação Industrial",
+  "Biotecnologia",
+  "Celulose e Papel",
+  "Desenvolvimento de Sistemas",
+  "Edificações",
+  "Eletromecânica",
+  "Eletrotécnica",
+  "Fabricação Mecânica",
+  "Logística",
+  "Manutenção Automotiva",
+  "Mecatrônica",
+  "Mecânica",
+  "Modelagem do Vestuário",
+  "Qualidade",
+  "Química",
+  "Segurança do Trabalho",
+  "Vestuário",
+];
 
 function normalizarValorPadrao(valor, validos) {
   if (!valor) return "";
   const padrao = valor.toLowerCase();
   return validos.find((v) => v.toLowerCase() === padrao) || "";
+}
+
+function validarCursoInformado(textoUsuario) {
+  const texto = textoUsuario.toLowerCase();
+  return cursosDisponiveis.find((curso) => texto.includes(curso.toLowerCase()));
 }
 
 function formatarRespostaCursos(cursos, filtros) {
@@ -51,6 +79,26 @@ export async function chatController(req, res) {
   const { message } = req.body;
   let cursos = [];
   let filtros = {};
+
+  const regexDescricao =
+    /(?:o que é|do que se trata|sobre)\s+(?:o\s+)?curso\s+de\s+(.+)/i;
+  const matchDescricao = message.match(regexDescricao);
+
+  if (matchDescricao) {
+    const nomeCurso = matchDescricao[1].trim();
+    const descricao = await buscarDescricaoCurso(nomeCurso);
+
+    const resposta = descricao
+      ? descricao
+      : `Não encontrei informações sobre o curso "${nomeCurso}". Pode verificar o nome e tentar novamente?`;
+
+    await pool.query(
+      "INSERT INTO messages (lead_id, user_message, bot_response, curso) VALUES (?, ?, ?, ?)",
+      [req.leadId || null, message, resposta, nomeCurso]
+    );
+
+    return res.status(200).json({ reply: resposta });
+  }
 
   try {
     const mensagemLower = message.toLowerCase();
@@ -98,50 +146,62 @@ export async function chatController(req, res) {
     if (eConsultaCurso) {
       filtros = await extrairFiltrosDeTexto(message);
 
-      // Força cidade se IA não identificar
+      // Corrigir reconhecimento de filtros
+      if (!filtros.curso) {
+        const cursoDetectado = validarCursoInformado(message);
+        if (cursoDetectado) filtros.curso = cursoDetectado;
+      }
+
+      // Corrigir modalidade
+      filtros.modalidade = normalizarValorPadrao(
+        filtros.modalidade,
+        modalidadeValidas
+      );
+
+      // Corrigir turno se houver
+      filtros.turno = normalizarValorPadrao(filtros.turno, turnosValidos);
+
+      // Detectar cidade na mensagem, se ainda estiver vazia
       if (!filtros.cidade) {
         const cidadesConhecidas = [
-          "Curitiba",
-          "Londrina",
-          "Maringá",
-          "Toledo",
-          "Cascavel",
-          "Ponta Grossa",
-          "Guarapuava",
-          "Foz do Iguaçu",
-          "Colombo",
-          "Afonso Pena",
-          "Rio Negro",
-          "Arapongas",
-          "Campo Mourão",
-          "Santo Antonio da Platina",
-          "Telêmaco Borba",
-          "Umuarama",
-          "Paranavaí",
-          "Medianeira",
-          "Apucarana",
-          "Irati",
-          "Jaguariaíva",
-          "São Mateus do Sul",
+          /*...*/
         ];
-
         for (const cidade of cidadesConhecidas) {
-          if (mensagemLower.includes(cidade.toLowerCase())) {
+          if (message.toLowerCase().includes(cidade.toLowerCase())) {
             filtros.cidade = cidade;
             break;
           }
         }
       }
 
-      filtros.modalidade = normalizarValorPadrao(
-        filtros.modalidade,
-        modalidadeValidas
-      );
+      // Agora sim: verificar se algo ainda está faltando
+      const perguntas = [];
+      if (!filtros.modalidade)
+        perguntas.push("Qual modalidade você prefere? (Presencial ou EAD)");
+      if (!filtros.cidade)
+        perguntas.push("Qual cidade você gostaria de estudar?");
+      if (!filtros.curso) perguntas.push("Qual curso você está procurando?");
+
+      if (perguntas.length > 0) {
+        const respostaPerguntas = perguntas.join(" ");
+        await pool.query(
+          "INSERT INTO messages (lead_id, user_message, bot_response, modalidade, cidade, curso) VALUES (?, ?, ?, ?, ?, ?)",
+          [
+            req.leadId || null,
+            message,
+            respostaPerguntas,
+            filtros.modalidade || null,
+            filtros.cidade || null,
+            filtros.curso || null,
+          ]
+        );
+        return res.status(200).json({ reply: respostaPerguntas });
+      }
+
       filtros.turno = normalizarValorPadrao(filtros.turno, turnosValidos);
 
       cursos = await buscarCursos(filtros);
 
-      // 🔄 Buscar info do lead
       const [[leadInfo]] = await pool.query(
         "SELECT * FROM leads WHERE id = ?",
         [req.leadId]
@@ -155,26 +215,19 @@ export async function chatController(req, res) {
         filtros.modalidade || cursos[0]?.modalidade || "não informado";
       const idUser = req.leadId;
 
-      // ⚡ Se intenção de inscrição
       if (desejaSeInscrever) {
         const mensagemWhats = `Olá! Meu nome é ${nome}, tenho interesse no curso de ${curso} em ${cidade}. Poderia me ajudar?`;
-        const numberWhatsapp = "559999999999"; // <-- Substitua com número real
+        const numberWhatsapp = "559999999999"; // Substitua pelo número desejado
         const urlEncodedMessage = encodeURIComponent(mensagemWhats);
 
         const linkWhatsapp = `https://api.whatsapp.com/send?phone=${numberWhatsapp}&text=${urlEncodedMessage}`;
         const linkInscrevase = `<a href='https://www.senaipr.org.br/cursos-tecnicos/pre-matricula/?id=${idUser}&nome=${nome}&email=${email}&telefone=${telefone}&modalidade=${modalidade}&cidade=${cidade}&curso=${curso}'>Inscreva-se aqui</a>`;
 
-        const links = `
-Ótimo! Você pode realizar sua inscrição por um dos caminhos abaixo:
-
-📋 Formulário de pré-matrícula: ${linkInscrevase}
-💬 WhatsApp: ${linkWhatsapp}
-        `;
+        const resposta = `\nÓtimo! Você pode realizar sua inscrição por um dos caminhos abaixo:\n\n📋 Formulário de pré-matrícula: ${linkInscrevase}\n💬 WhatsApp: ${linkWhatsapp}`;
 
         await pool.query(
-          `INSERT INTO messages
-    (lead_id, user_message, bot_response, nome, email, telefone, modalidade, cidade, curso)
-   VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+          `INSERT INTO messages (lead_id, user_message, bot_response, nome, email, telefone, modalidade, cidade, curso)
+           VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)`,
           [
             req.leadId || null,
             message,
@@ -184,11 +237,11 @@ export async function chatController(req, res) {
             telefone,
             modalidade,
             cidade,
-            curso
+            curso,
           ]
         );
 
-        return res.status(200).json({ reply: links });
+        return res.status(200).json({ reply: resposta });
       }
 
       const resposta = formatarRespostaCursos(cursos, filtros);
@@ -206,24 +259,19 @@ export async function chatController(req, res) {
       return res.status(200).json({ reply: resposta });
     }
 
-    // Pergunta geral
     const botResponse = await getChatResponse(message);
 
+    const [[leadInfo]] = await pool.query("SELECT * FROM leads WHERE id = ?", [
+      req.leadId,
+    ]);
+    const nome = leadInfo?.nome || "não informado";
+    const email = leadInfo?.email || "";
+    const telefone = leadInfo?.telefone || "";
+
     await pool.query(
-      `INSERT INTO messages
-    (lead_id, user_message, bot_response, nome, email, telefone, modalidade, cidade, curso)
-   VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)`,
-      [
-        req.leadId || null,
-        message,
-        resposta,
-        nome,
-        email,
-        telefone,
-        modalidade,
-        cidade,
-        curso,
-      ]
+      `INSERT INTO messages (lead_id, user_message, bot_response, nome, email, telefone)
+       VALUES (?, ?, ?, ?, ?, ?)`,
+      [req.leadId || null, message, botResponse, nome, email, telefone]
     );
 
     return res.status(200).json({ reply: botResponse });
