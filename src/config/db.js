@@ -2,7 +2,7 @@ import mysql from "mysql2/promise";
 import dotenv from "dotenv";
 dotenv.config();
 
-const sslEnabled = process.env.DB_SSL === "false";
+const sslEnabled = process.env.DB_SSL === "true";
 
 const pool = mysql.createPool({
   host: process.env.MYSQL_DB_HOST,
@@ -10,7 +10,7 @@ const pool = mysql.createPool({
   database: process.env.MYSQL_DB_SCHEMA,
   password: process.env.MYSQL_DB_PASSWORD,
   port: process.env.MYSQL_DB_PORT || 3306,
-  ssl: sslEnabled ? { rejectUnauthorized: true } : undefined,
+  ssl: sslEnabled ? { rejectUnauthorized: false } : undefined,
   waitForConnections: true,
   connectionLimit: 10,
   queueLimit: 0,

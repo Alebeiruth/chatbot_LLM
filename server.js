@@ -8,6 +8,8 @@ import authRoutes from "./src/routes/auth.routes.js";
 import coursesRoutes from "./src/routes/courses.routes.js";
 import leadRoutes from "./src/routes/lead.routes.js";
 import captchaRoutes from "./src/routes/captcha.routes.js";
+import pool from "./src/config/db.js"; // ou ajuste caminho
+
 
 dotenv.config();
 const app = express();
@@ -30,6 +32,14 @@ app.get("/", (req, res) => {
   res.send({ message: "API está funcionando!" });
 });
 
-app.listen(PORT, () => {
+
+app.listen(PORT, async () => {
+  try {
+    const [rows] = await pool.query("SELECT 1");
+    console.log(`Conexão com o banco de dados OK.`);
+  } catch (err) {
+    console.error("Erro ao conectar no banco:", err.message);
+  }
+
   console.log(`Servidor rodando na porta ${PORT}`);
 });
