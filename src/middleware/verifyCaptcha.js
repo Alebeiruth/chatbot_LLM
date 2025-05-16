@@ -7,7 +7,6 @@ export default async function verifyCaptcha(req, res, next) {
 
 
   if (!captchaToken || !lead_id) {
-    console.log("Erro: Campos obrigatórios faltando", { captchaToken, lead_id });
     return res.status(400).json({ error: "captchaToken e lead_id são obrigatórios" });
   }
 
