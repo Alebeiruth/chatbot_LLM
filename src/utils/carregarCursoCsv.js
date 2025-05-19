@@ -3,11 +3,12 @@ import path from "path";
 import csv from "csv-parser";
 
 export async function buscarDescricaoCurso(nomeCurso) {
-  const filePath = path.resolve(
+  const filePath = path.join(
+    process.cwd(),
+    "src",
     "data",
-    "Cursos_Tecnicos_Simplificados_Completos.csv"
+    "curso_tecnicos.csv"
   );
-
   return new Promise((resolve, reject) => {
     const resultados = [];
 

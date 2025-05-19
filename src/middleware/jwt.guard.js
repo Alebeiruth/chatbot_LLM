@@ -1,9 +1,10 @@
 import jwt from "jsonwebtoken";
+import dotenv from "dotenv";
 
-function verificationToken(req, res, next) {
+dotenv.config();
+
+export default function verificationToken(req, res, next) {
   const authHeader = req.headers["authorization"];
-
-  //Esperando: Bearer <token>
   const token = authHeader && authHeader.split(" ")[1];
 
   if (!token) {
@@ -11,15 +12,19 @@ function verificationToken(req, res, next) {
   }
 
   try {
-    // Verifica o Token
     const decoded = jwt.verify(token, process.env.JWT_SECRET_TOKEN);
-    req.leadID = decoded.leadID; // Adiciona o usuário decodificado ao objeto de requisição
-    next(); // Chama o próximo middleware ou rota
+
+    // ⚠️ Extraia o email do token e injete no req
+    req.email = decoded.email;
+
+    if (!req.email) {
+      return res.status(400).json({ error: "Email não presente no token" });
+    }
+
+    next();
   } catch (err) {
     return res
       .status(403)
       .json({ success: false, message: "Token inválido ou expirado" });
   }
 }
-
-export default verificationToken;

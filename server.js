@@ -10,7 +10,6 @@ import leadRoutes from "./src/routes/lead.routes.js";
 import captchaRoutes from "./src/routes/captcha.routes.js";
 import pool from "./src/config/db.js"; // ou ajuste caminho
 
-
 dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -31,7 +30,6 @@ app.use("/api/captcha", captchaRoutes);
 app.get("/", (req, res) => {
   res.send({ message: "API está funcionando!" });
 });
-
 
 app.listen(PORT, async () => {
   try {

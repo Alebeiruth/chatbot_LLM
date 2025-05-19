@@ -1,32 +1,42 @@
 import fetch from "node-fetch";
 import jwt from "jsonwebtoken";
 import dotenv from "dotenv";
+import pool from "../config/db.js";
 dotenv.config();
 
 export async function processarCaptcha(req, res) {
-  const { captchaToken, lead_id } = req.body;
-
-  if (!captchaToken || !lead_id) {
+  const { captchaToken, email } = req.body;
+  if (!captchaToken || !email) {
     return res.status(400).json({
       success: false,
-      message: "captchaToken e lead_id são obrigatórios",
+      message: "captchaToken e email são obrigatórios",
+    });
+  }
+  // Verifica se o email existe no banco
+  const [rows] = await pool.query("SELECT * FROM leads WHERE email = ?", [
+    email,
+  ]);
+  if (!rows.length) {
+    return res.status(404).json({
+      success: false,
+      message: "Lead não encontrado para este e-mail",
     });
   }
 
-  // ✅ Modo de teste - retorna token falso
+  // ✅ Modo de teste
   if (captchaToken === "TESTE") {
-    const token = jwt.sign({ leadId: lead_id }, process.env.JWT_SECRET_TOKEN, {
-      expiresIn: "10m"
+    const token = jwt.sign({ email }, process.env.JWT_SECRET_TOKEN, {
+      expiresIn: "10m",
     });
 
     return res.status(200).json({
       success: true,
       message: "Captcha verificado com sucesso",
-      token: token
+      token,
     });
   }
 
-  // ✅ Modo produção - verifica no Google
+  // ✅ Modo produção
   try {
     const response = await fetch(
       "https://www.google.com/recaptcha/api/siteverify",
@@ -49,14 +59,14 @@ export async function processarCaptcha(req, res) {
       });
     }
 
-    const token = jwt.sign({ leadId: lead_id }, process.env.JWT_SECRET_TOKEN, {
-      expiresIn: "10m"
+    const token = jwt.sign({ email }, process.env.JWT_SECRET_TOKEN, {
+      expiresIn: "10m",
     });
 
     return res.status(200).json({
       success: true,
       message: "Captcha verificado com sucesso",
-      token: token
+      token,
     });
   } catch (err) {
     console.error("Erro ao verificar reCAPTCHA:", err.message);
