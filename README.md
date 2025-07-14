@@ -18,7 +18,7 @@ Adicionalmente, dentro de `middleware/` estão disponíveis os arquivos:
 • **jwt.guard.js**: Contém os links oficiais para download dos middlewares de autenticação
 • **validation.js**: Descrição completa para verificação de entrada e limpeza de dados
 
-Os resultados experimentais são armazenados automaticamente em um banco de dados SQLite (`resultados.db`) e exportados para análise estatística via `resultado_experimento.csv` para posterior análise estatística e comparação de desempenho dos modelos.
+Os resultados experimentais são armazenados automaticamente em um banco de dados MySQL Workbench (`resultados.db`) e exportados para análise estatística via `resultado_experimento.csv` para posterior análise estatística e comparação de desempenho dos modelos.
 
 ## 🛠️ Tecnologias Utilizadas
 
