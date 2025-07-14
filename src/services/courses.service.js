@@ -7,11 +7,13 @@ import csv from "csv-parser";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-export async function buscarCursos(filtros) {
+export async function buscar_Cursos(filtros) {
   return new Promise((resolve, reject) => {
     const cursos = [];
 
-    fs.createReadStream(path.join(__dirname, "../data/courses.csv"))
+    fs.createReadStream(
+      path.join(__dirname, "../data/nova_base_atualizada_sem.csv")
+    )
       .pipe(csv())
       .on("data", (row) => {
         const unidadeCSV = row.cidade.toLowerCase() || "";

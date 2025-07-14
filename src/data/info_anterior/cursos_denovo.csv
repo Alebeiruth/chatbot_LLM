@@ -1,0 +1,149 @@
+regiao;cidade;nome_curso;modalidade;vagas;turno;momento_presencial;horario_aulas;duracao_mes;data_inicio;endereco
+RMC - Curitiba;São José dos Pinhais; Automação Industrial;EAD;35;Integral;Sábado;08h00 - 17h00;24;2025/04/08;Av Rui Barbosa - 5881 - Afonso Pena - 83045-350 - São José dos Pinhais - PR
+RMC - Curitiba;São José dos Pinhais; Eletromecânica;EAD;35;Noturno;Quinta-feira;18h30 - 22h30;24;2025/04/08;Av Rui Barbosa - 5881 - Afonso Pena - 83045-350 - São José dos Pinhais - PR
+RMC - Curitiba;São José dos Pinhais; Mecânica;Presencial;35;Noturno;Segunda a Sexta-feira;18h30 - 22h30;24;2025/04/08;Av Rui Barbosa - 5881 - Afonso Pena - 83045-350 - São José dos Pinhais - PR
+RMC - Curitiba;São José dos Pinhais; Mecatrânica;Presencial;35;Noturno;Segunda a Sexta-feira;18h30 - 22h30;24;2025/04/08;Av Rui Barbosa - 5881 - Afonso Pena - 83045-350 - São José dos Pinhais - PR
+Sudoeste;Ampére; Automação Industrial;EAD;25;Noturno;Terça e Quarta -feira;18h30 - 22h30;24;2025/04/08;Rua Erechim 383 - Bairro Rondinha - CEP:85640-000 - Ampére - PR
+Norte;Apucarana; Eletromecânica;EAD;35;Noturno;Terça-feira;19h00 - 23h00;24;2025/04/08;Avenida Aviação - 1851 - 86812-500 - Apucarana - PR
+Norte;Apucarana; Eletrotécnica;EAD;35;Noturno;Quarta e Sexta-feira;19h00 - 23h00;24;2025/04/08;Avenida Aviação - 1851 - 86812-500 - Apucarana - PR
+Norte;Apucarana II; Desenvolvimento de Sistemas;EAD;30;Noturno;Terça-feira;19h00 - 23h00;24;2025/04/08;Avenida Aviação - 1851 - 86812-500 - Apucarana - PR
+Norte;Arapongas; Automação Industrial;EAD;30;Noturno;Quinta-feira;18h50 - 22h50;24;2025/04/08;Rua Guaratinga - 2247 - Parque Industrial II - 86703-010 - Arapongas - PR
+Norte;Arapongas; Eletrotécnica;EAD;30;Noturno;Terça e Quinta-feira;18h50 - 22h50;24;2025/04/08;Rua Guaratinga - 2247 - Parque Industrial II - 86703-010 - Arapongas - PR
+Norte;Arapongas; Segurança do Trabalho;EAD;30;Noturno;Segunda a Sexta-feira;18h50 - 22h50;24;2025/04/08;Rua Guaratinga - 2247 - Parque Industrial II - 86703-010 - Arapongas - PR
+Curitiba;Boqueirão; Administração;EAD;40;Noturno;Quarta e Quinta-feira;18h30 - 22h30;12;2025/04/08;Avenida Comendador Franco - 1341 - 80215-090 - Curitiba - PR
+Curitiba;Boqueirão; Administração;EAD;40;Vespertino;Quarta e Quinta-feira;13h15 - 17h15;12;2025/04/08;Avenida Comendador Franco - 1341 - 80215-090 - Curitiba - PR
+Curitiba;Boqueirão; Manutenção Automotiva;Presencial;40;Matutino;Segunda a Sexta-feira;08h00 - 12h00;24;2025/04/08;Avenida Comendador Franco - 1341 - 80215-090 - Curitiba - PR
+Curitiba;Boqueirão; Manutenção Automotiva;Presencial;40;Noturno;Segunda a Sexta-feira;18h30 - 22h30;24;2025/04/08;Avenida Comendador Franco - 1341 - 80215-090 - Curitiba - PR
+Curitiba;Boqueirão; Manutenção Automotiva;EAD;40;Noturno;Quinta e Sexta-feira;18h30 - 22h30;24;2025/04/08;Avenida Comendador Franco - 1341 - 80215-090 - Curitiba - PR
+RMC - Curitiba;Campo Largo; Administração;EAD;42;Noturno;Quarta e Quinta-feira;18h45 -22h45;12;2025/04/08;Avenida Padre Natal Pigatto - 2027 - 83607-240 - Campo Largo - PR
+RMC - Curitiba;Campo Largo; Mecânica;EAD;42;Noturno;Quinta e Sexta-feira;18h45 -22h45;24;2025/04/08;Avenida Padre Natal Pigatto - 2027 - 83607-240 - Campo Largo - PR
+RMC - Curitiba;Campo Largo; Segurança do Trabalho;EAD;42;Noturno;Terça e Sexta-feira;18h45 -22h45;24;2025/04/08;Avenida Padre Natal Pigatto - 2027 - 83607-240 - Campo Largo - PR
+Noroeste;Campo Mourão; Automação Industrial;EAD;25;Noturno;Quinta-feira;19h00 - 23h00;24;2025/04/08;Via do trabalhador - 895 - Parque Industrial Augusto Tezelli Filho - Campo Mourão - PR
+Noroeste;Campo Mourão; Eletrônica;EAD;25;Noturno;Quinta-feira;19h00 - 23h00;24;2025/04/08;Via do trabalhador - 895 - Parque Industrial Augusto Tezelli Filho - Campo Mourão - PR
+Curitiba;Campus da Indústria; Desenvolvimento de Sistemas;Presencial;38;Vespertino;Segunda a Sexta-feira;13h30 - 17h30;18;2025/04/08;Avenida Comendador Franco - 1341 - 80215-090 - Curitiba - PR
+Curitiba;Campus da Indústria; Desenvolvimento de Sistemas;Presencial;38;Noturno;Segunda a Sexta-feira;18h30 - 22h30;18;2025/04/08;Avenida Comendador Franco - 1341 - 80215-090 - Curitiba - PR
+Curitiba;Campus da Indústria; Edificações;EAD;35;Vespertino;Quinta-feira;13h30 - 17h30;24;2025/04/08;Avenida Comendador Franco - 1341 - 80215-090 - Curitiba - PR
+Curitiba;Campus da Indústria; Edificações;EAD;35;Noturno;Quinta-feira;18h30 - 22h30;24;2025/04/08;Avenida Comendador Franco - 1341 - 80215-090 - Curitiba - PR
+Curitiba;Campus da Indústria; Qualidade;EAD;33;Noturno;Terça-feira;18h30 - 22h30;18;2025/04/08;Avenida Comendador Franco - 1341 - 80215-090 - Curitiba - PR
+Curitiba;Campus da Indústria; Segurança do Trabalho;EAD;35;Matutino;Terça-feira;08h00 - 12h00;24;2025/04/08;Avenida Comendador Franco - 1341 - 80215-090 - Curitiba - PR
+Curitiba;Campus da Indústria; Segurança do Trabalho;EAD;35;Noturno;Terça-feira;18h30 - 22h30;24;2025/04/08;Avenida Comendador Franco - 1341 - 80215-090 - Curitiba - PR
+Curitiba;Campus da Indústria; Vestuário;EAD;30;Matutino;Sexta-feira;08h00 - 12h00;24;2025/04/08;Avenida Comendador Franco - 1341 - 80215-090 - Curitiba - PR
+Oeste;Cascavel; Eletromecânica;EAD;35;Noturno;Sexta-feira;19h00 - 23h10;24;2025/04/08;Rua Heitor Stockler De França - 161 - 85819-760 - Cascavel - PR
+Oeste;Cascavel; Eletromecânica;EAD;35;Noturno;Quarta e Sexta-feira;19h00 - 23h00;24;2025/04/08;Rua Heitor Stockler De França - 161 - 85819-760 - Cascavel - PR
+Noroeste;Cianorte; Automação Industrial;EAD;30;Noturno;Terça-feira;19h00 - 23h00;24;2025/04/08;Travessa Um - 63 - 87207-034 - Cianorte - PR
+Noroeste;Cianorte; Eletromecânica;EAD;30;Noturno;Terça-feira;19h00 - 23h00;24;2025/04/08;Travessa Um - 63 - 87207-034 - Cianorte - PR
+Noroeste;Cianorte; Eletromecânica;EAD;30;Noturno;Segunda e Terça-feira;19h00 - 23h00;24;2025/04/08;Travessa Um - 63 - 87207-034 - Cianorte - PR
+Noroeste;Cianorte; Eletromecânica;Presencial;30;Noturno;Segunda a Sexta-feira;19h00 - 23h00;24;2025/04/08;Travessa Um - 63 - 87207-034 - Cianorte - PR
+Noroeste;Cianorte; Segurança do Trabalho;EAD;30;Noturno;Quarta-feira;19h00 - 23h00;24;2025/04/08;Travessa Um - 63 - 87207-034 - Cianorte - PR
+Curitiba;CIC; Alimentos;EAD;35;Noturno;Terça e Quinta-feira;18h30 - 22h30;24;2025/04/08;Rua Senador Accioly Filho - 298 - 81310-000 - Curitiba - PR
+Curitiba;CIC; Biotecnologia;EAD;35;Noturno;Segunda e Quarta-feira;18h30 - 22h30;24;2025/04/08;Rua Senador Accioly Filho - 298 - 81310-000 - Curitiba - PR
+Curitiba;CIC; Desenvolvimento de Sistemas;Presencial;35;Vespertino;Segunda a Sexta-feira;13h30 - 17h30;18;2025/04/08;Rua Senador Accioly Filho - 298 - 81310-000 - Curitiba - PR
+Curitiba;CIC; Eletromecânica;EAD;35;Noturno;Terça e Quinta-feira;18h30 - 22h30;24;2025/04/08;Rua Senador Accioly Filho - 298 - 81310-000 - Curitiba - PR
+Curitiba;CIC; Eletromecânica;Presencial;35;Noturno;Segunda a Sexta-feira;18h30 - 22h30;24;2025/04/08;Rua Senador Accioly Filho - 298 - 81310-000 - Curitiba - PR
+Curitiba;CIC; Eletrônica;Presencial;35;Noturno;Segunda a Sexta-feira;18h30 - 22h30;24;2025/04/08;Rua Senador Accioly Filho - 298 - 81310-000 - Curitiba - PR
+Curitiba;CIC; Eletromecânica;EAD;35;Noturno;Sexta e Terça-feira;18h30 - 22h30;24;2025/04/08;Rua Senador Accioly Filho - 298 - 81310-000 - Curitiba - PR
+Curitiba;CIC; Eletromecânica;Presencial;35;Noturno;Segunda a Sexta-feira;18h30 - 22h30;24;2025/04/08;Rua Senador Accioly Filho - 298 - 81310-000 - Curitiba - PR
+Curitiba;CIC; Logística;Presencial;35;Noturno;Segunda a Sexta-feira;18h30 - 22h30;18;2025/04/08;Rua Senador Accioly Filho - 298 - 81310-000 - Curitiba - PR
+Curitiba;CIC; Mecânica;EAD;35;Noturno;Quarta-feira;18h30 - 22h30;24;2025/04/08;Rua Senador Accioly Filho - 298 - 81310-000 - Curitiba - PR
+Curitiba;CIC; Mecânica;Presencial;35;Matutino;Segunda a Sexta-feira;08h00 - 12h00;24;2025/04/08;Rua Senador Accioly Filho - 298 - 81310-000 - Curitiba - PR
+Curitiba;CIC; Mecânica;Presencial;35;Noturno;Segunda a Sexta-feira;18h30 - 22h30;24;2025/04/08;Rua Senador Accioly Filho - 298 - 81310-000 - Curitiba - PR
+Curitiba;CIC; Mecatrônica;EAD;35;Noturno;Segunda e Quarta-feira;18h30 - 22h30;24;2025/04/08;Rua Senador Accioly Filho - 298 - 81310-000 - Curitiba - PR
+Curitiba;CIC; Mecatrônica;Presencial;35;Matutino;Segunda a Sexta-feira;08h00 - 12h00;24;2025/04/08;Rua Senador Accioly Filho - 298 - 81310-000 - Curitiba - PR
+Curitiba;CIC; Mecatrônica;Presencial;35;Noturno;Segunda a Sexta-feira;18h30 - 22h30;24;2025/04/08;Rua Senador Accioly Filho - 298 - 81310-000 - Curitiba - PR
+Curitiba;CIC; Química;EAD;35;Noturno;Quarta e Sexta-feira;18h30 - 22h30;24;2025/04/08;Rua Senador Accioly Filho - 298 - 81310-000 - Curitiba - PR
+RMC - Curitiba;Colombo; Automação Industrial;EAD;30;Noturno;Quarta-feira;18h30 - 22h30;24;2025/04/08;Av Pref João Batista Stocco - 256 - Guaraituba Colombo - PR
+RMC - Curitiba;Colombo; Eletromecânica;EAD;30;Noturno;Segunda a Sexta-feira;18h30 - 22h30;24;2025/04/08;Av Pref João Batista Stocco - 256 - Guaraituba Colombo - PR
+RMC - Curitiba;Colombo; Mineração;EAD;30;Integral;Sábado;08h00 - 17h00;24;2025/04/08;Av Pref João Batista Stocco - 256 - Guaraituba Colombo - PR
+RMC - Curitiba;Colombo; Química;EAD;30;Integral;Sábado;08h00 - 17h00;24;2025/04/08;Av Pref João Batista Stocco - 256 - Guaraituba Colombo - PR
+Sudoeste;Dois Vizinhos; Automação Industrial;Presencial;35;Noturno;Segunda a Sexta-feira;18h30 - 22h30;24;2025/04/08;Rua Pedro Alvares Cabral - 905 - 85660-000 - Dois Vizinhos - PR
+Curitiba;Centro - Curitiba; Automação Industrial;EAD;40;Noturno;Terça-feira;18h30 - 22h30;24;2025/04/08;R Paula Gomes - 270 - São Francisco - 80510-070 - Curitiba - PR
+Curitiba;Centro - Curitiba; Desenvolvimento de Sistemas;EAD;40;Noturno;Segunda a Sexta-feira;18h30 - 22h30;18;2025/04/08;R Paula Gomes - 270 - São Francisco - 80510-070 - Curitiba - PR
+Curitiba;Centro - Curitiba; Desenvolvimento de Sistemas;Presencial;40;Vespertino;Segunda a Sexta-feira;13h30 - 17h30;18;2025/04/08;R Paula Gomes - 270 - São Francisco - 80510-070 - Curitiba - PR
+Curitiba;Centro - Curitiba; Desenvolvimento de Sistemas;Presencial;40;Noturno;Segunda a Sexta-feira;18h30 - 22h30;18;2025/04/08;R Paula Gomes - 270 - São Francisco - 80510-070 - Curitiba - PR
+Curitiba;Centro - Curitiba; Qualidade;EAD;40;Noturno;Segunda-feira;18h30 - 22h30;18;2025/04/08;R Paula Gomes - 270 - São Francisco - 80510-070 - Curitiba - PR
+Norte; Londrina; Desenvolvimento de Sistemas;EAD;30;Noturno;Quarta-feira;19h00 - 23h00;18;2025/04/08;Rua Belém - 844 - 86026-040 - Londrina - PR
+Oeste;Foz do Iguaçu; Eletromecânica;EAD;35;Noturno;Segunda e Sexta-feira;19h00 - 23h00;24;2025/04/08;Rua Perdigão - 58 - 85866-460 - Foz do Iguaçu - PR
+Sudoeste;Francisco Beltrão; Manutenção Automotiva;EAD;30;Noturno;Quinta e Sexta-feira;18h30 - 22h30;24;2025/04/08;Rua União da Vitoria - 66 - 85605-586 - Francisco Beltrão - PR
+Campos Gerais;Guarapuava; Automação Industrial;EAD;30;Integral;Sábado;08h00 - 17h00;24;2025/04/08;Rua Coronel Lustosa - 1736 - 85015-340- Guarapuava - PR
+Campos Gerais;Guarapuava; Automação Industrial;Presencial;30;Noturno;Segunda a Sexta-feira;18h30 - 22h30;24;2025/04/08;Rua Coronel Lustosa - 1736 - 85015-340- Guarapuava - PR
+Campos Gerais;Guarapuava; Automação Industrial;EAD;30;Noturno;Terça e Quinta-feira;18h30 - 22h30;24;2025/04/08;Rua Coronel Lustosa - 1736 - 85015-340- Guarapuava - PR
+Campos Gerais;Guarapuava; Automação Industrial;EAD;30;Noturno;Segunda e Quarta-feira;18h30 - 22h30;24;2025/04/08;Rua Coronel Lustosa - 1736 - 85015-340- Guarapuava - PR
+Campos Gerais;Guarapuava; Desenvolvimento de Sistemas;EAD;30;Integral;Sábado;08h00 - 17h00;18;2025/04/08;Rua Coronel Lustosa - 1736 - 85015-340- Guarapuava - PR
+Campos Gerais;Guarapuava; Eletromecânica;EAD;30;Integral;Sábado;08h00 - 17h00;24;2025/04/08;Rua Coronel Lustosa - 1736 - 85015-340- Guarapuava - PR
+Campos Gerais;Guarapuava; Eletromecânica;Presencial;30;Noturno;Segunda a Sexta-feira;18h30 - 22h30;24;2025/04/08;Rua Coronel Lustosa - 1736 - 85015-340- Guarapuava - PR
+Campos Gerais;Guarapuava; Eletromecânica;Presencial;30;Noturno;Segunda a Sexta-feira;18h30 - 22h30;24;2025/04/08;Rua Coronel Lustosa - 1736 - 85015-340- Guarapuava - PR
+Campos Gerais;Irati; Automação Industrial;EAD;25;Integral;Sábado;08h00 - 17h00;24;2025/04/08;Rua Coronel Emilio Gomes - 3 - 84500-000 - Irati - PR
+Campos Gerais;Irati; Eletromecânica;EAD;25;Integral;Sábado;08h00 - 17h00;24;2025/04/08;Rua Coronel Emilio Gomes - 3 - 84500-000 - Irati - PR
+Campos Gerais;Irati; Segurança do Trabalho;EAD;25;Integral;Sábado;08h00 - 17h00;24;2025/04/08;Rua Coronel Emilio Gomes - 3 - 84500-000 - Irati - PR
+Campos Gerais;Jaguariaíva; Eletromecânica;Presencial;40;Noturno;Segunda a Sexta-feira;18h30 - 22h30;24;2025/04/08;Rua Raul Pinto de Castilho - Sn - 84200-000 - Jaguariaíva - PR
+Norte;Londrina; Eletromecânica;EAD;30;Noturno;Terça-feira;19h00 - 23h00;24;2025/04/08;Rua Belém - 844 - 86026-040 - Londrina - PR
+Norte;Londrina; Eletromecânica;Presencial;30;Noturno;Segunda e Quarta-feira;19h00 - 23h00;18;2025/04/08;Rua Belém - 844 - 86026-040 - Londrina - PR
+Norte;Londrina; Segurança do Trabalho;EAD;30;Noturno;Terça-feira;19h00 - 23h00;24;2025/04/08;Rua Belém - 844 - 86026-040 - Londrina - PR
+Norte;Londrina; Manutenção Automotiva;EAD;30;Noturno;Segunda e Terça-feira;19h00 - 23h00;24;2025/04/08;Rua Belém - 844 - 86026-040 - Londrina - PR
+Oeste;Marechal Cândido Rondon; Alimentos;EAD;30;Noturno;Segunda a Sexta-feira;18h45 - 22h45;24;2025/04/08;Avenida Rio Grande do Sul - 3133 - 85960-000 - Marechal Cândido Rondon - PR
+Oeste;Marechal Cândido Rondon; Eletromecânica;Presencial;30;Noturno;Segunda a Sexta-feira;18h45 - 22h45;24;2025/04/08;Avenida Rio Grande do Sul - 3133 - 85960-000 - Marechal Cândido Rondon - PR
+Noroeste;Maringá CTM; Desenvolvimento de Sistemas;EAD;35;Noturno;Terça-feira;19h00 - 23h00;18;2025/04/08;Rua Jose Correia De Aguiar - 361 - 87053-276 - Maringá - PR
+Noroeste;Maringá CTM; Eletromecânica;EAD;35;Noturno;Quarta-feira;19h00 - 23h00;24;2025/04/08;Rua Jose Correia De Aguiar - 361 - 87053-276 - Maringá - PR
+Noroeste;Maringá CTM; Eletromecânica;EAD;35;Integral;Sábado;08h00 - 17h00;24;2025/04/08;Rua Jose Correia De Aguiar - 361 - 87053-276 - Maringá - PR
+Noroeste;Maringá Z5; Edificações;EAD;35;Integral;Sábado;08h00 - 17h00;24;2025/04/08;Rua Vereador Nelson Abrao - 80 - Zona 05 - Maringá - PR
+Noroeste;Maringá Z5; Manutenção Automotiva;EAD;35;Noturno;Terça e Quarta-feira;19h00 - 23h00;24;2025/04/08;Rua Vereador Nelson Abrao - 80 - Zona 05 - Maringá - PR 
+Noroeste;Maringá Z5; Química;EAD;35;Noturno;Quarta-feira;19h00 - 23h10;24;2025/04/08;Rua Vereador Nelson Abrao - 80 - Zona 05 - Maringá - PR 
+Oeste;Medianeira; Automação Industrial;EAD;35;Noturno;Quarta e Quinta-feira;18h30 - 22h30;24;2025/04/08;Av Brasília - 675 - Cond - 85884-000 - Medianeira - PR
+Sudoeste;Palmas; Qualidade;EAD;20;Noturno;Terça-feira;18h30 - 22h30;18;2025/04/08;Rua Marechal Deodoro - s/n - São José - Palmas - PR
+RMC - Curitiba;Paranaguá; Eletromecânica;EAD;35;Noturno;Segunda;18h30 - 22h30;24;2025/04/08;Rua Washington Luiz - 1189 - Paranaguá - PR
+RMC - Curitiba;Paranaguá; Eletromecânica;Presencial;35;Noturno;Segunda a Sexta-feira;18h30 - 22h30;24;2025/04/08;Rua Washington Luiz - 1189 - Paranaguá - PR
+RMC - Curitiba;Paranaguá; Eletromecânica;Presencial;35;Noturno;Segunda a Sexta-feira;18h30 - 22h30;24;2025/04/08;Rua Washington Luiz - 1189 - Paranaguá - PR
+RMC - Curitiba;Paranaguá; Segurança do Trabalho;EAD;35;Noturno;Terça-feira;18h30 - 22h30;24;2025/04/08;Rua Washington Luiz - 1189 - Paranaguá - PR
+RMC - Curitiba;Paranaguá; Química;EAD;35;Noturno;Quarta-feira;18h30 - 22h30;24;2025/04/08;Rua Washington Luiz - 1189 - Paranaguá - PR
+Noroeste;Paranavaí; Eletromecânica;EAD;25;Integral;Sábado;08h00 - 17h00;24;2025/04/08;Rua José Virgílio Fernandes - S/N - Jardim Morumbi - Paranavaí - PR
+Noroeste;Paranavaí; Eletromecânica;EAD;25;Noturno;Quinta-feira;19h00 - 23h00;24;2025/04/08;Rua José Virgílio Fernandes - S/N - Jardim Morumbi - Paranavaí - PR
+Noroeste;Paranavaí; Automação Industrial;EAD;25;Noturno;Segunda-feira;19h00 - 23h00;24;2025/04/08;Rua José Virgílio Fernandes - S/N - Jardim Morumbi - Paranavaí - PR
+Sudoeste;Pato Branco; Automação Industrial;Presencial;35;Noturno;Segunda a Sexta-feira;18h30 - 22h30;24;2025/04/08;Rua Xingu - 833 - Amadori - Pato Branco - PR
+Sudoeste;Pato Branco; Qualidade;EAD;35;Noturno;Quinta-feira;18h30 - 22h30;24;2025/04/08;Rua Xingu - 833 - Amadori - Pato Branco - PR
+Sudoeste;Pato Branco; Segurança do Trabalho;EAD;35;Matutino;Sábado;08h00 - 17h00;24;2025/04/08;Rua Xingu - 833 - Amadori - Pato Branco - PR
+Sudoeste;Pato Branco; Logstica;Presencial;35;Matutino;Segunda a Sexta-feira;18h30 - 22h30;24;2025/04/08;Rua Xingu - 833 - Amadori - Pato Branco - PR
+RMC - Curitiba;Pinhais; Administração;EAD;35;Noturno;Quarta-feira;18h30 - 22h30;12;2025/04/08;Rua Quinze de Outubro - 1207 - Centro - Pinhais - PR
+RMC - Curitiba;Pinhais; Automação Industrial;EAD;35;Noturno;Segunda a Sexta-feira;18h30 - 22h30;24;2025/04/08;Rua Quinze de Outubro - 1207 - Centro - Pinhais - PR
+RMC - Curitiba;Pinhais; Eletromecânica;EAD;35;Integral;Sábado;08h00 - 17h00;24;2025/04/08;Rua Quinze de Outubro - 1207 - Centro - Pinhais - PR
+RMC - Curitiba;Pinhais; Eletromecânica;EAD;35;Noturno;Quinta-feira;18h30 - 22h30;24;2025/04/08;Rua Quinze de Outubro - 1207 - Centro - Pinhais - PR
+RMC - Curitiba;Pinhais; Mecânica;EAD;35;Noturno;Terça-feira;18h30 - 22h30;24;2025/04/08;Rua Quinze de Outubro - 1207 - Centro - Pinhais - PR
+Campos Gerais;Ponta Grossa; Automação Industrial;Presencial;35;Noturno;Segunda a Sexta-feira;18h30 - 22h30;24;2025/04/08;Rua Dr Joaquim de Paula Xavier - 1050 - Vila Estrela - Ponta Grossa - Ponta Grossa - PR
+Campos Gerais;Ponta Grossa; Automação Industrial;EAD;35;Integral;Sábado;08h00 - 17h00;24;2025/04/08;Rua Dr Joaquim de Paula Xavier - 1050 - Vila Estrela - Ponta Grossa - Ponta Grossa - PR
+Campos Gerais;Ponta Grossa; Biotecnologia;EAD;35;Noturno;Quinta-feira;18h30 - 22h30;24;2025/04/08;Rua Dr Joaquim de Paula Xavier - 1050 - Vila Estrela - Ponta Grossa - Ponta Grossa - PR
+Campos Gerais;Ponta Grossa; Desenvolvimento de Sistemas;EAD;35;Noturno;Quarta-feira;18h30 - 22h30;18;2025/04/08;Rua Dr Joaquim de Paula Xavier - 1050 - Vila Estrela - Ponta Grossa - Ponta Grossa - PR
+Campos Gerais;Ponta Grossa; Eletromecânica;EAD;35;Integral;Sábado;08h00 - 17h00;24;2025/04/08;Rua Dr Joaquim de Paula Xavier - 1050 - Vila Estrela - Ponta Grossa - Ponta Grossa - PR
+Campos Gerais;Ponta Grossa; Eletromecânica;EAD;35;Integral;Sábado;08h00 - 17h00;24;2025/04/08;Rua Dr Joaquim de Paula Xavier - 1050 - Vila Estrela - Ponta Grossa - Ponta Grossa - PR
+Campos Gerais;Ponta Grossa; Manutenção Automotiva;EAD;35;Integral;Sábado;08h00 - 17h00;24;2025/04/08;Rua Dr Joaquim de Paula Xavier - 1050 - Vila Estrela - Ponta Grossa - Ponta Grossa - PR
+Campos Gerais;Ponta Grossa; Manutenção Automotiva;Presencial;35;Noturno;Segunda a Sexta-feira;18h30 - 22h30;24;2025/04/08;Rua Dr Joaquim de Paula Xavier - 1050 - Vila Estrela - Ponta Grossa - Ponta Grossa - PR
+Campos Gerais;Ponta Grossa; Química;EAD;35;Noturno;Quarta-feira;18h30 - 22h30;24;2025/04/08;Rua Dr Joaquim de Paula Xavier - 1050 - Vila Estrela - Ponta Grossa - Ponta Grossa - PR
+Campos Gerais;Ponta Grossa; Segurança do Trabalho;EAD;35;Noturno;Segunda-feira;18h30 - 22h30;24;2025/04/08;Rua Dr Joaquim de Paula Xavier - 1050 - Vila Estrela - Ponta Grossa - Ponta Grossa - PR
+RMC - Curitiba;Rio Negro; Desenvolvimento de Sistemas;EAD;25;Noturno;Segunda-feira;18h30 - 22h30;18;2025/04/08;Rua José Eduardo Henning - 50 - Rio Negro - PR
+RMC - Curitiba;Rio Negro; Mecânica;EAD;25;Noturno;Quinta-feira;18h30 - 22h30;24;2025/04/08;Rua José Eduardo Henning - 50 - Rio Negro - PR
+RMC - Curitiba;Rio Negro; Programação de Jogos Digitais;Presencial;25;Noturno;Terça-feira;19h00 - 23h00;24;2025/04/08;Rua José Eduardo Henning - 50 - Rio Negro - PR
+RMC - Curitiba;Rio Negro; Segurança do Trabalho;EAD;25;Noturno;Segunda-feira;18h30 - 22h30;24;2025/04/08;Rua José Eduardo Henning - 50 - Rio Negro - PR
+Norte;Santo Antonio da Platina; Automação Industrial;EAD;35;Integral;Sábado;08h00 - 17h00;24;2025/04/08;Rua José Vieira de Gusmão - 850 - Santo Antonio da Platina - PR
+Norte;Santo Antonio da Platina; Eletromecânica;EAD;35;Integral;Sábado;08h00 - 17h00;24;2025/04/08;Rua José Vieira de Gusmão - 850 - Santo Antonio da Platina - PR
+Norte;Santo Antonio da Platina; Eletromecânica;EAD;35;Integral;Sábado;08h00 - 17h00;24;2025/04/08;Rua José Vieira de Gusmão - 850 - Santo Antonio da Platina - PR
+Norte;Santo Antonio da Platina; Segurança do Trabalho;EAD;35;Integral;Sábado;08h00 - 17h00;18;2025/04/08;Rua José Vieira de Gusmão - 850 - Santo Antonio da Platina - PR
+Campos Gerais;São Mateus do Sul; Eletromecânica;EAD;35;Noturno;Segunda e Quarta-feira;18h30 - 22h30;24;2025/04/08;Rua Maria Paulina Wolter - 2050 - São Mateus do Sul - PR
+Campos Gerais;São Mateus do Sul; Mecânica;Presencial;35;Noturno;Segunda a Sexta-feira;18h30 - 22h30;24;2025/04/08;Rua Maria Paulina Wolter - 2050 - São Mateus do Sul - PR
+Campos Gerais;Telâmaco Borba; Automação Industrial;EAD;40;Noturno;Segunda-feira;18h30 - 22h30;24;2025/04/08;Av Presidente Kennedy - 66 - Centro - Telâmaco Borba - PR
+Campos Gerais;Telâmaco Borba; Automação Industrial;Presencial;40;Vespertino;Segunda a Sexta-feira;13h30 - 17h30;24;2025/04/08;Av Presidente Kennedy - 66 - Centro - Telâmaco Borba - PR
+Campos Gerais;Telâmaco Borba; Automação Industrial;Presencial;40;Noturno;Segunda a Sexta-feira;18h30 - 22h30;24;2025/04/08;Av Presidente Kennedy - 66 - Centro - Telâmaco Borba - PR
+Campos Gerais;Telâmaco Borba; Celulose e Papel;EAD;40;Noturno;Segunda-feira;18h30 - 22h30;24;2025/04/08;Av Presidente Kennedy - 66 - Centro - Telâmaco Borba - PR
+Campos Gerais;Telâmaco Borba; Celulose e Papel;Presencial;40;Vespertino;Segunda a Sexta-feira;13h30 - 17h30;24;2025/04/08;Av Presidente Kennedy - 66 - Centro - Telâmaco Borba - PR
+Campos Gerais;Telâmaco Borba; Celulose e Papel;Presencial;40;Noturno;Segunda a Sexta-feira;18h30 - 22h30;24;2025/04/08;Av Presidente Kennedy - 66 - Centro - Telâmaco Borba - PR
+Campos Gerais;Telâmaco Borba; Eletromecânica;EAD;40;Noturno;Terça e Quarta-feira;18h30 - 22h30;24;2025/04/08;Av Presidente Kennedy - 66 - Centro - Telâmaco Borba - PR
+Campos Gerais;Telâmaco Borba; Eletromecânica;Presencial;40;Noturno;Segunda a Sexta-feira;18h30 - 22h30;24;2025/04/08;Av Presidente Kennedy - 66 - Centro - Telâmaco Borba - PR
+Campos Gerais;Telâmaco Borba; Eletromecânica;EAD;40;Noturno;Terça e Quarta-feira;18h30 - 22h30;24;2025/04/08;Av Presidente Kennedy - 66 - Centro - Telâmaco Borba - PR
+Campos Gerais;Telâmaco Borba; Eletromecânica;Presencial;40;Noturno;Segunda a Sexta-feira;18h30 - 22h30;24;2025/04/08;Av Presidente Kennedy - 66 - Centro - Telâmaco Borba - PR
+Oeste;Toledo; Alimentos;EAD;40;Noturno;Quinta-feira;18h40 - 22h40;24;2025/04/08;Av Presidente Kennedy - 66 - Centro - Telâmaco Borba - PR
+Oeste;Toledo; Edificações;EAD;40;Noturno;Segunda-feira;18h40 - 22h40;24;2025/04/08;Rua Julio de Castilhos - 3465 - Vila Industria - Toledo - PR - Toledo - PR
+Oeste;Toledo; Eletromecânica;EAD;40;Noturno;Segunda-feira;18h40 - 22h40;24;2025/04/08;Rua Julio de Castilhos - 3465 - Vila Industria - Toledo - PR
+Oeste;Toledo; Segurança do Trabalho;EAD;40;Noturno;Terça-feira;18h40 - 22h40;24;2025/04/08;Rua Julio de Castilhos - 3465 - Vila Industria - Toledo - PR
+Noroeste;Umuarama; Automação Industrial;EAD;25;Integral;Sábado;08h00 - 17h00;24;2025/04/08;Rua Capital da Amizade - 2635 - Jardim Colibri - Umuarama - PR
+Noroeste;Umuarama; Eletromecânica;EAD;25;Noturno;Terça-feira;19h00 - 23h00;24;2025/04/08;Rua Capital da Amizade - 2635 - Jardim Colibri - Umuarama - PR
+Noroeste;Umuarama; Eletromecânica;EAD;25;Noturno;Quinta-feira;19h00 - 23h00;24;2025/04/08;Rua Capital da Amizade - 2635 - Jardim Colibri - Umuarama - PR
+Campos Gerais;União da Vitória; Eletromecânica;EAD;35;Noturno;Terça e Quinta-feira;19h00 - 23h00;24;2025/04/08;Rua Marechal Deodoro - 70 - Centro - União da Vitória - PR
+Campos Gerais;União da Vitória; Eletromecânica;Presencial;35;Noturno;Segunda a Sexta-feira;19h00 - 23h00;24;2025/04/08;Rua Marechal Deodoro - 70 - Centro - União da Vitória - PR
+Campos Gerais;União da Vitória; Manutenção Automotiva;Presencial;35;Noturno;Segunda a Sexta-feira;19h00 - 23h00;24;2025/04/08;Rua Marechal Deodoro - 70 - Centro - União da Vitória - PR

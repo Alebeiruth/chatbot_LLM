@@ -8,7 +8,7 @@ async function responderCursosPorTexto(req, res) {
     const filtros = await extrairFiltrosDeTexto(message);
     const cursos = await buscarCursos(filtros);
 
-    if (!cursos.lenght) {
+    if (!cursos.length) {
       return res.status(200).json({
         reply: "Nenhum curso encontrado com as informações fornecidas.",
       });
